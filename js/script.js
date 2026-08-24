@@ -1,3 +1,24 @@
+// Theme toggle (light / dark) with persistence
+const themeToggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+
+function applyTheme(theme) {
+  root.setAttribute('data-theme', theme);
+  themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+}
+
+let savedTheme = 'light';
+try {
+  savedTheme = localStorage.getItem('construsalco-theme') || 'light';
+} catch (err) { /* localStorage unavailable */ }
+applyTheme(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  try { localStorage.setItem('construsalco-theme', next); } catch (err) { /* ignore */ }
+});
+
 // Header scroll state + progress bar
 const header = document.getElementById('siteHeader');
 const progressBar = document.getElementById('progressBar');
