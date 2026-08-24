@@ -28,6 +28,10 @@
   <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.3" y="3.3" width="17.4" height="17.4" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2.3" y="6" width="19.4" height="12" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.3 9.6 15 12l-4.7 2.4z" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 32 32">
+    <path fill="currentColor" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.4.6 4.6 1.8 6.6L3 29l6.9-2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.1c-2 0-3.9-.5-5.6-1.6l-.4-.2-4.1 1.2 1.1-4-.3-.4a10.3 10.3 0 0 1-1.6-5.5C5.1 9.7 10 4.9 16 4.9S26.9 9.7 26.9 15.7 22 26.1 16 26.1z"/>
+    <path fill="currentColor" d="M21.9 18.4c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.1-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.8-1-2.4-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.3-.6-.4z"/>
+  </symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.8-6.5 10-6.5S22 12 22 12s-3.8 6.5-10 6.5S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
   <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></symbol>
@@ -86,7 +90,9 @@
   <!-- HERO -->
   <section id="inicio" class="hero">
     <div class="hero-media">
-      <img src="assets/img/hero-video-poster.jpeg" alt="" class="hero-img">
+      <video class="hero-img" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-video-poster.jpeg">
+        <source src="assets/video/hero-bg.mp4" type="video/mp4">
+      </video>
       <div class="hero-overlay"></div>
       <div class="hero-grid"></div>
     </div>
@@ -353,7 +359,7 @@
           <a href="#" aria-label="Facebook" class="social-btn"><svg><use href="#i-facebook"/></svg></a>
           <a href="#" aria-label="Instagram" class="social-btn"><svg><use href="#i-instagram"/></svg></a>
           <a href="#" aria-label="YouTube" class="social-btn"><svg><use href="#i-youtube"/></svg></a>
-          <a href="https://wa.me/573164639446" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-btn whatsapp"><svg><use href="#i-chat"/></svg></a>
+          <a href="https://wa.me/573164639446" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-btn whatsapp"><svg><use href="#i-whatsapp"/></svg></a>
         </div>
       </div>
 
@@ -418,7 +424,7 @@
 </footer>
 
 <a href="https://wa.me/573164639446" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Escríbenos por WhatsApp">
-  <svg><use href="#i-chat"/></svg>
+  <svg><use href="#i-whatsapp"/></svg>
 </a>
 
 <script src="js/script.js"></script>
