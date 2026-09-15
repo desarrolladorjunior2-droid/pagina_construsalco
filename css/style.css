@@ -464,12 +464,13 @@ html[data-theme="dark"] .theme-toggle .icon-moon { opacity: 1; transform: rotate
 }
 .partner-card {
   background: var(--white); border: 1px solid rgba(255,255,255,0.6); border-radius: 16px;
-  padding: 26px 36px; display: flex; align-items: center; justify-content: center;
+  padding: 22px 32px; display: flex; align-items: center; justify-content: center;
+  min-width: 190px; min-height: 110px;
   box-shadow: 0 18px 40px -18px rgba(0,0,0,0.45);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .partner-card:hover { transform: translateY(-7px) scale(1.03); box-shadow: 0 26px 55px -18px rgba(0,0,0,0.55); }
-.partner-card img { height: 42px; width: auto; }
+.partner-card img { height: 72px; width: auto; max-width: 100%; object-fit: contain; }
 
 /* Contact */
 .contact { overflow: hidden; }
@@ -571,6 +572,8 @@ html[data-theme="dark"] .theme-toggle .icon-moon { opacity: 1; transform: rotate
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; text-align: left; }
   .partners-track { gap: 16px; }
+  .partner-card { min-width: 140px; min-height: 90px; padding: 16px 22px; }
+  .partner-card img { height: 52px; }
   .process-strip { grid-template-columns: 1fr; }
   .blueprint-frame::before, .blueprint-frame::after { width: 20px; height: 20px; }
 }
